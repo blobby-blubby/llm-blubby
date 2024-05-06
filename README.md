@@ -82,7 +82,7 @@ The Braintrust example imports from HuggingFace an evaluation dataset of news ar
 In the LangSmith example, we instantiate the dataset ourselves. Ahead of triggering your evaluation via CircleCI, run the following commands:
 
 ```
-cd ./experiments/ai-langsmith
+cd ./langsmith
 pip install -r ./requirements.txt
 python dataset.py
 ```
