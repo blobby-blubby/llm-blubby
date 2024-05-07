@@ -44,7 +44,7 @@ This will create a context with environment variables for the credentials you've
 
 ![LLMOps Integration Context](images/LLMOps-Integration-Context.png)
 
-:bulb: _You can also optionally [store a `GITHUB_TOKEN`](#to-enable-the-evals-orb-to-post-eval-job-summaries-on-github-pull-requests) as an environment variable on this context, if you'd like your pipelines to post summarized eval job results as comments on GitHub pull requests._
+:bulb: _You can also optionally [store a `GITHUB_TOKEN`](#to-enable-the-evals-orb-to-post-eval-job-summaries-on-github-pull-requests) as an environment variable on this context, if you'd like your pipelines to post summarized eval job results as comments on GitHub pull requests (only available for projects integrated through [GitHub OAuth](https://circleci.com/docs/github-integration/))._
 
 ### Step 2. Update CircleCI config with your newly-created context
 
@@ -99,7 +99,7 @@ If a [`GITHUB_TOKEN`](#to-enable-the-evals-orb-to-post-eval-job-summaries-on-git
 
 <img style="text-align:center" width="700" alt="Screenshot 2024-04-30 at 10 21 48" src="https://github.com/CircleCI-Public/llm-eval-examples/assets/19594309/73c628b0-de35-41f2-8f06-7e486691cea6">
 
-### A few notes about CircleCI config...
+### Configure evals output location
 
 The `.circleci/run_evals_config.yml` file uses the [evals orb](https://circleci.com/developer/orbs/orb/circleci/evals) to define jobs that run the evaluation code in each example folder. The orb handles setting up the evaluation environment, executing the evaluations, and collecting the results.
 
@@ -119,7 +119,10 @@ _Note: the [evals orb](https://circleci.com/developer/orbs/orb/circleci/evals) w
     cmd: ...
 ```
 
-### To enable the [evals orb](https://circleci.com/developer/orbs/orb/circleci/evals) to post eval job summaries on GitHub pull requests:
+### Configure the [evals orb](https://circleci.com/developer/orbs/orb/circleci/evals) to post eval job summaries on GitHub pull requests
+
+> [!WARNING]
+> Currently, this feature is available only to GitHub projects integrated throug OAuth. To find out which GitHub account type you have, refer to the [GitHub OAuth integration](https://circleci.com/docs/github-integration/) page of our Docs.
 
 - Generate a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) with `repo` scope.
 - Add this token as the environment variable [`GITHUB_TOKEN`](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) in CircleCI project settings. Alternatively, you could include this secret in the context that was created when [you entered your credentials](#step-1-enter-credentials-into-circleci) as part of LLMOps Integration.
