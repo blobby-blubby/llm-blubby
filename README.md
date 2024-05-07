@@ -44,7 +44,7 @@ This will create a context with environment variables for the credentials you've
 
 ![LLMOps Integration Context](images/LLMOps-Integration-Context.png)
 
-:bulb: _You can also optionally [store a `GITHUB_TOKEN`](#to-enable-the-evals-orb-to-post-eval-job-summaries-on-github-pull-requests) as an environment variable on this context, if you'd like your pipelines to post summarized eval job results as comments on GitHub pull requests (only available for projects integrated through [GitHub OAuth](https://circleci.com/docs/github-integration/))._
+:bulb: _You can also optionally [store a `GITHUB_TOKEN`](#configure-the-evals-orb-to-post-eval-job-summaries-on-github-pull-requests) as an environment variable on this context, if you'd like your pipelines to post summarized eval job results as comments on GitHub pull requests (only available for projects integrated through [GitHub OAuth](https://circleci.com/docs/github-integration/))._
 
 ### Step 2. Update CircleCI config with your newly-created context
 
@@ -95,7 +95,7 @@ Whichever evaluation platform you choose, as evals are run through the [evals or
 
 <img style="text-align:center" width="370" alt="Screenshot 2024-04-30 at 10 19 53" src="https://github.com/CircleCI-Public/llm-eval-examples/assets/19594309/9df64653-d1b7-41c5-8830-f8d8d497bdca">
 
-If a [`GITHUB_TOKEN`](#to-enable-the-evals-orb-to-post-eval-job-summaries-on-github-pull-requests) has been set up, the orb will also post summarized eval results as a PR comment:
+If a [`GITHUB_TOKEN`](#configure-the-evals-orb-to-post-eval-job-summaries-on-github-pull-requests) has been set up, the orb will also post summarized eval results as a PR comment:
 
 <img style="text-align:center" width="700" alt="Screenshot 2024-04-30 at 10 21 48" src="https://github.com/CircleCI-Public/llm-eval-examples/assets/19594309/73c628b0-de35-41f2-8f06-7e486691cea6">
 
@@ -154,7 +154,7 @@ Given the volatile nature of evaluations, evaluations orchestrated by the [evals
 Instead, a summary of the evaluation results can _optionally_ be presented:
 
 - as an [artifact](https://circleci.com/docs/artifacts/) within the CircleCI pipeline job
-- as a comment on the corresponding GitHub pull request (requires a [GitHub Personal Access Token](#to-enable-the-evals-orb-to-post-eval-job-summaries-on-github-pull-requests))
+- as a comment on the corresponding GitHub pull request (requires a [GitHub Personal Access Token](#configure-the-evals-orb-to-post-eval-job-summaries-on-github-pull-requests))
 
 ### Orb Parameters
 
