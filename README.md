@@ -7,7 +7,7 @@ A collection of LLM eval examples using the [CircleCI Evals Orb](https://circlec
 Before running any of the examples, you'll need:
 
 - A **CircleCI account** connected to your code. You can [sign up for free](https://circleci.com/signup/).
-- An **OpenAI account**. Sign up for an OpenAI account at [openai.com](https://openai.com) to access their platform and API. Once logged into your OpenAI account, generate your API key. Make note of the `API Key` and `Organization ID`.
+- An **OpenAI account**. Sign up for an OpenAI account at [openai.com](https://openai.com) to access their platform and API. Once logged into your OpenAI account, generate your API key. Make notes of the `API Key` and `Organization ID`.
 
 Depending on your choice of evaluation provider, you will also need one of the following:
 
@@ -17,7 +17,7 @@ Depending on your choice of evaluation provider, you will also need one of the f
 The API keys will allow you to authenticate and interact with the APIs of your LLMOps tools to leverage their services.
 
 See their documentation for more details on capabilities and usage.
-
+s
 ## Getting started
 
 Fork this repo to run evaluations on a LLM-based application using the [evals orb](https://circleci.com/developer/orbs/orb/circleci/evals).
