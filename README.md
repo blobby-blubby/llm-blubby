@@ -2,7 +2,7 @@
 
 A collection of LLM eval examples using the [CircleCI Evals Orb](https://circleci.com/developer/orbs/orb/circleci/evals).
 
-## Prerequisites
+## Prerequisite
 
 Before running any of the examples, you'll need:
 
