@@ -9,7 +9,7 @@ Before running any of the examples, you'll need:
 - A **CircleCI account** connected to your code. You can [sign up for free](https://circleci.com/signup/).
 - An **OpenAI account**. Sign up for an OpenAI account at [openai.com](https://openai.com) to access their platform and API. Once logged into your OpenAI account, generate your API key. Make note of the `API Key` and `Organization ID`.
 
-Depending on your choice of evaluation provider, you will also need one of the following:
+dsf on your choice of evaluation provider, you will also need one of the following:
 
 - A **Braintrust account**. Sign up for a Braintrust account at [braintrustdata.com](https://www.braintrustdata.com) to access their platform and API. Once logged into your Braintrust account, generate an `API Key` and make note of it.
 - A **LangSmith account**. Sign up for a LangSmith account at [langsmith.com](https://langsmith.com) to use their language models API. Once logged into your LangSmith account, go to the API Keys page in your account settings to generate an API key. Copy this key to authenticate when using the LangSmith API.
