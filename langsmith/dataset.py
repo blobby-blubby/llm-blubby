@@ -10,7 +10,7 @@ def create_dataset():
         ("vikings", "v"),
         ("planet earth", "e"),
         ("Sirens of Titan", "t"),
-        ("Tears of valhala", "marvel")asda
+        ("Tears of valhala", "marvel")
     ]
 
     dataset = client.create_dataset(dataset_name)
